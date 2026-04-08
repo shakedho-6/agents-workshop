@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Guide | Agents Workshop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0f;
+            color: #f0f0f0;
+            overflow-x: hidden;
+        }
+        
+        .fade-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .glass-card {
+            background: #13131f;
+            border: 1px solid #1e1e2e;
+            border-radius: 16px;
+        }
+
+        .accent-teal { color: #00d4aa; }
+        
+        .toggle-btn {
+            background: #13131f;
+            border: 1px solid #1e1e2e;
+            color: #888;
+            transition: all 0.3s ease;
+        }
+
+        .toggle-btn.active {
+            background: #00d4aa;
+            border-color: #00d4aa;
+            color: #000;
+            box-shadow: 0 0 15px rgba(0, 212, 170, 0.3);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col pt-12 pb-24 px-6">
+
+    <div class="max-w-3xl mx-auto w-full">
+        <!-- Back Link -->
+        <a href="index.html" class="inline-flex items-center text-gray-400 hover:text-white transition-colors mb-12 fade-up">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+            Back to Workshop
+        </a>
+
+        <!-- Header -->
+        <div class="text-center mb-12 fade-up delay-100">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Giving your agent its own WhatsApp number</h1>
+            <p class="text-xl text-gray-400">Keep your personal number safe and let your agent run wild.</p>
+        </div>
+
+        <!-- OS Toggle -->
+        <div class="flex justify-center gap-4 mb-12 fade-up delay-200">
+            <button id="btn-ios" class="toggle-btn active px-8 py-4 rounded-xl font-bold text-lg flex items-center gap-3 w-48 justify-center">
+                🍎 iPhone
+            </button>
+            <button id="btn-android" class="toggle-btn px-8 py-4 rounded-xl font-bold text-lg flex items-center gap-3 w-48 justify-center">
+                🤖 Android
+            </button>
+        </div>
+
+        <!-- Content Container -->
+        <div class="relative fade-up delay-300">
+            
+            <!-- iOS Content -->
+            <div id="content-ios" class="glass-card p-8 md:p-10 transition-opacity duration-300">
+                <div class="mb-8 pb-8 border-b border-[#1e1e2e]">
+                    <h3 class="text-xl font-bold text-white mb-4">What you need</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-center gap-3">
+                            <span class="text-[#00d4aa]">✓</span> 
+                            <span>Numero app (<a href="https://apps.apple.com/app/id1249825694" target="_blank" class="text-[#00d4aa] hover:underline">App Store</a>)</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="text-[#00d4aa]">✓</span> 
+                            <span>WhatsApp Business (Free)</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold text-white mb-6">Steps</h3>
+                    <ol class="space-y-6 text-gray-300">
+                        <li class="flex gap-4">
+                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-[#1e1e2e] flex items-center justify-center font-bold text-[#00d4aa]">1</span>
+                            <div>Download Numero and buy a WhatsApp-compatible number.<br><span class="text-sm text-gray-500">Expect to pay ~$20 for a full year.</span></div>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-[#1e1e2e] flex items-center justify-center font-bold text-[#00d4aa]">2</span>
+                            <div>Download WhatsApp Business and sign up using your new Numero number.</div>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-[#1e1e2e] flex items-center justify-center font-bold text-[#00d4aa]">3</span>
+                            <div>When asked to verify, choose SMS, open the Numero app, and copy the code.</div>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-[#1e1e2e] flex items-center justify-center font-bold text-[#00d4aa]">4</span>
+                            <div>Done. Your agent now has its own number.</div>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="bg-blue-900/20 border border-blue-800/50 rounded-xl p-5 mb-6">
+                    <p class="text-blue-300 text-sm">
+                        <strong class="text-blue-200">💡 Heads up:</strong> Since March 2026, WhatsApp has gradually started rolling out dual-account support for regular WhatsApp on iOS. Check Settings > Account to see if you can add a second number directly before downloading the Business app!
+                    </p>
+                </div>
+
+                <div class="bg-yellow-900/20 border border-yellow-800/50 rounded-xl p-5">
+                    <p class="text-yellow-300 text-sm">
+                        <strong class="text-yellow-500">⚠️ Important:</strong> When connecting your agent in Ocana, make sure you scan the QR code using this new WhatsApp Business account, not your personal one.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Android Content -->
+            <div id="content-android" class="glass-card p-8 md:p-10 absolute top-0 left-0 w-full opacity-0 pointer-events-none transition-opacity duration-300">
+                <div class="mb-8 pb-8 border-b border-[#1e1e2e]">
+                    <h3 class="text-xl font-bold text-white mb-4">What you need</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-center gap-3">
+                            <span class="text-[#00d4aa]">✓</span> 
+                            <span>Numero app (<a href="https://play.google.com/store/apps/details?id=com.esim.numero&hl=en&pli=1" target="_blank" class="text-[#00d4aa] hover:underline">Google Play</a>)</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="text-[#00d4aa]">✓</span> 
+                            <span>Your existing WhatsApp app</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold text-white mb-6">Steps</h3>
+                    <ol class="space-y-6 text-gray-300">
+                        <li class="flex gap-4">
+                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-[#1e1e2e] flex items-center justify-center font-bold text-[#00d4aa]">1</span>
+                            <div>Download Numero and buy a WhatsApp-compatible number.<br><span class="text-sm text-gray-500">Expect to pay ~$20 for a full year.</span></div>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-[#1e1e2e] flex items-center justify-center font-bold text-[#00d4aa]">2</span>
+                            <div>Open your existing WhatsApp, go to <strong>Settings > Account > Add account</strong>.<br><span class="text-sm text-gray-500">Android natively lets you run two numbers on the same app.</span></div>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-[#1e1e2e] flex items-center justify-center font-bold text-[#00d4aa]">3</span>
+                            <div>Enter your new Numero number.</div>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-[#1e1e2e] flex items-center justify-center font-bold text-[#00d4aa]">4</span>
+                            <div>When asked to verify, choose SMS, open the Numero app, and copy the verification code.</div>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-[#1e1e2e] flex items-center justify-center font-bold text-[#00d4aa]">5</span>
+                            <div>Done. You can now easily switch between your personal and agent profiles.</div>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="bg-yellow-900/20 border border-yellow-800/50 rounded-xl p-5">
+                    <p class="text-yellow-300 text-sm">
+                        <strong class="text-yellow-500">⚠️ Important:</strong> When connecting your agent in Ocana, make sure you switch to the agent's account profile and scan the QR code from there.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // Simple Intersection Observer for the fade-up animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+        // Toggle Logic
+        const btnIos = document.getElementById('btn-ios');
+        const btnAndroid = document.getElementById('btn-android');
+        const contentIos = document.getElementById('content-ios');
+        const contentAndroid = document.getElementById('content-android');
+
+        btnIos.addEventListener('click', () => {
+            btnIos.classList.add('active');
+            btnAndroid.classList.remove('active');
+            
+            contentIos.classList.remove('opacity-0', 'pointer-events-none', 'absolute', 'top-0', 'left-0');
+            contentIos.classList.add('relative');
+            
+            contentAndroid.classList.add('opacity-0', 'pointer-events-none', 'absolute', 'top-0', 'left-0');
+            contentAndroid.classList.remove('relative');
+        });
+
+        btnAndroid.addEventListener('click', () => {
+            btnAndroid.classList.add('active');
+            btnIos.classList.remove('active');
+            
+            contentAndroid.classList.remove('opacity-0', 'pointer-events-none', 'absolute', 'top-0', 'left-0');
+            contentAndroid.classList.add('relative');
+            
+            contentIos.classList.add('opacity-0', 'pointer-events-none', 'absolute', 'top-0', 'left-0');
+            contentIos.classList.remove('relative');
+        });
+    </script>
+</body>
+</html>
