@@ -280,24 +280,36 @@
             
             <div class="relative max-w-2xl mx-auto w-full fade-up px-4 md:px-0">
                 <!-- Carousel Container -->
-                <div class="overflow-hidden rounded-xl relative shadow-md bg-white border border-gray-200 min-h-[300px]">
+                <div class="overflow-hidden rounded-xl relative shadow-md bg-white border border-gray-200 min-h-[300px] transition-all duration-300 hover:shadow-lg hover:border-gray-400 group/card">
                     
                     <!-- Slide 1 -->
-                    <div id="slide-1" class="absolute inset-0 p-12 flex flex-col items-center justify-center text-center transition-all duration-500 transform translate-x-0 opacity-100 z-10 border border-gray-200">
-                        <h3 class="text-3xl font-bold text-gray-900 mb-6">Forget everything you know</h3>
-                        <p class="text-xl text-gray-600">Software used to be deterministic. You click a button, you get a fixed result. Agents are probabilistic. They don't just execute menus; they execute intent.</p>
+                    <div id="slide-1" class="absolute inset-0 p-12 flex flex-col items-center justify-center text-center transition-all duration-500 transform translate-x-0 opacity-100 z-10">
+                        <h3 class="text-3xl font-bold text-gray-900 transition-all duration-300 group-hover/card:text-[#00CA72]">Forget everything you know</h3>
+                        <div class="grid grid-rows-[0fr] group-hover/card:grid-rows-[1fr] transition-all duration-300 ease-in-out w-full">
+                            <div class="overflow-hidden">
+                                <p class="text-xl text-gray-600 mt-6">Software used to be deterministic. You click a button, you get a fixed result. Agents are probabilistic. They don't just execute menus; they execute intent.</p>
+                            </div>
+                        </div>
                     </div>
                     
                     <!-- Slide 2 -->
-                    <div id="slide-2" class="absolute inset-0 p-12 flex flex-col items-center justify-center text-center transition-all duration-500 transform translate-x-full opacity-0 z-0 border border-gray-200">
-                        <h3 class="text-3xl font-bold text-gray-900 mb-6">This is not plug-and-play</h3>
-                        <p class="text-xl text-gray-600">It's plug, train, play, teach, learn, unplug, and plug again. It's an iterative relationship, not a one-time setup.</p>
+                    <div id="slide-2" class="absolute inset-0 p-12 flex flex-col items-center justify-center text-center transition-all duration-500 transform translate-x-full opacity-0 z-0">
+                        <h3 class="text-3xl font-bold text-gray-900 transition-all duration-300 group-hover/card:text-[#FB275D]">This is not plug-and-play</h3>
+                        <div class="grid grid-rows-[0fr] group-hover/card:grid-rows-[1fr] transition-all duration-300 ease-in-out w-full">
+                            <div class="overflow-hidden">
+                                <p class="text-xl text-gray-600 mt-6">It's plug, train, play, teach, learn, unplug, and plug again. It's an iterative relationship, not a one-time setup.</p>
+                            </div>
+                        </div>
                     </div>
                     
                     <!-- Slide 3 -->
-                    <div id="slide-3" class="absolute inset-0 p-12 flex flex-col items-center justify-center text-center transition-all duration-500 transform translate-x-full opacity-0 z-0 border border-gray-200">
-                        <h3 class="text-3xl font-bold text-gray-900 mb-6">Manage them like a new hire</h3>
-                        <p class="text-xl text-gray-600">You don't configure them—you onboard them. Give them clear context, set boundaries, and expect them to ask questions when they get stuck.</p>
+                    <div id="slide-3" class="absolute inset-0 p-12 flex flex-col items-center justify-center text-center transition-all duration-500 transform translate-x-full opacity-0 z-0">
+                        <h3 class="text-3xl font-bold text-gray-900 transition-all duration-300 group-hover/card:text-[#FFCC00]">Manage them like a new hire</h3>
+                        <div class="grid grid-rows-[0fr] group-hover/card:grid-rows-[1fr] transition-all duration-300 ease-in-out w-full">
+                            <div class="overflow-hidden">
+                                <p class="text-xl text-gray-600 mt-6">You don't configure them—you onboard them. Give them clear context, set boundaries, and expect them to ask questions when they get stuck.</p>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
