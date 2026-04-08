@@ -491,11 +491,13 @@
 
     <!-- Sticky CTA -->
     <a href="https://ocana.ai" target="_blank" class="fixed bottom-8 right-8 z-50 group flex items-center justify-center">
-        <div class="absolute right-full mr-4 bg-[#13131f] border border-[#1e1e2e] text-[#00d4aa] px-4 py-2 rounded-lg font-bold shadow-lg opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap hidden md:block">
-            Get your own agent
-        </div>
-        <div class="bg-transparent border-[3px] border-white hover:border-[#00d4aa] p-3 rounded-full shadow-[0_0_20px_rgba(0,0,0,0.5)] group-hover:shadow-[0_0_25px_rgba(0,212,170,0.3)] transition-all duration-300 hover:scale-105">
-            <img src="./ocana-logo.svg" alt="Ocana" class="w-12 h-12 object-contain">
+        <div class="relative flex items-center bg-[#13131f] rounded-full p-2 border border-[#1e1e2e] shadow-[0_0_20px_rgba(0,0,0,0.5)] group-hover:shadow-[0_0_25px_rgba(0,212,170,0.3)] group-hover:border-[#00d4aa] transition-all duration-300 overflow-hidden pr-2">
+            <div class="bg-transparent p-1 rounded-full z-10 relative">
+                <img src="./ocana-logo.svg" alt="Ocana" class="w-10 h-10 object-contain">
+            </div>
+            <div class="max-w-0 opacity-0 overflow-hidden whitespace-nowrap text-[#00d4aa] font-bold group-hover:max-w-xs group-hover:opacity-100 group-hover:pl-3 group-hover:pr-4 transition-all duration-300 ease-in-out">
+                Get your own agent
+            </div>
         </div>
     </a>
 
