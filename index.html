@@ -645,6 +645,65 @@
         document.querySelectorAll('.fade-up').forEach((el) => {
             observer.observe(el);
         });
+
+
+        // Carousel Logic
+        let currentSlide = 1;
+        const totalSlides = 3;
+
+        const updateCarousel = (newIndex) => {
+            if(newIndex < 1) newIndex = totalSlides;
+            if(newIndex > totalSlides) newIndex = 1;
+
+            for(let i=1; i<=totalSlides; i++) {
+                const slide = document.getElementById(`slide-${i}`);
+                const dot = document.querySelector(`.dot-btn[data-index="${i}"]`);
+                
+                if(i === newIndex) {
+                    // Active slide
+                    slide.classList.remove('translate-x-full', '-translate-x-full', 'opacity-0', 'z-0');
+                    slide.classList.add('translate-x-0', 'opacity-100', 'z-10');
+                    
+                    // Update dot color based on slide (Teal, Purple, Orange)
+                    dot.classList.remove('bg-gray-300');
+                    if(i === 1) dot.classList.add('bg-[#00d4aa]');
+                    if(i === 2) dot.classList.add('bg-[#7c3aed]');
+                    if(i === 3) dot.classList.add('bg-[#f97316]');
+                } else {
+                    // Inactive slides
+                    slide.classList.remove('translate-x-0', 'opacity-100', 'z-10');
+                    slide.classList.add('opacity-0', 'z-0');
+                    
+                    // Position them offscreen left or right
+                    if(i < newIndex) {
+                        slide.classList.add('-translate-x-full');
+                        slide.classList.remove('translate-x-full');
+                    } else {
+                        slide.classList.add('translate-x-full');
+                        slide.classList.remove('-translate-x-full');
+                    }
+                    
+                    // Reset dots
+                    dot.classList.remove('bg-[#00d4aa]', 'bg-[#7c3aed]', 'bg-[#f97316]');
+                    dot.classList.add('bg-gray-300');
+                }
+            }
+            currentSlide = newIndex;
+        };
+
+        const nextBtn = document.getElementById('next-btn');
+        const prevBtn = document.getElementById('prev-btn');
+        
+        if(nextBtn && prevBtn) {
+            nextBtn.addEventListener('click', () => updateCarousel(currentSlide + 1));
+            prevBtn.addEventListener('click', () => updateCarousel(currentSlide - 1));
+        }
+
+        document.querySelectorAll('.dot-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                updateCarousel(parseInt(e.target.dataset.index));
+            });
+        });
     </script>
 </body>
 </html>
