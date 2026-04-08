@@ -382,29 +382,69 @@
     </section>
 
     <!-- 3. HOW AN AGENT WORKS -->
-    <section id="how-it-works" class="bg-white">
-        <div class="max-w-6xl mx-auto w-full">
-            <h2 class="text-4xl font-bold mb-16 text-center fade-up text-gray-900">Brain. Memory. Tools.</h2>
+    <section id="how-it-works" class="bg-white py-24">
+        <div class="max-w-6xl mx-auto w-full px-6">
+            <div class="text-center mb-16 fade-up">
+                <h3 class="text-2xl font-bold text-[#00CA72] mb-4 tracking-widest uppercase">The Anatomy</h3>
+                <h2 class="text-5xl font-bold text-gray-900">What makes an agent?</h2>
+            </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div class="text-center fade-up delay-100">
-                    <div class="w-24 h-24 mx-auto bg-gray-50 rounded-full flex items-center justify-center text-4xl mb-6 border border-gray-200 shadow-sm">🧠</div>
-                    <h3 class="text-2xl font-bold mb-4 text-gray-900">Brain</h3>
-                    <p class="text-gray-600 mb-4">An LLM at its core.</p>
-                    <p class="text-sm text-gray-500">Claude • GPT-4 • Gemini • Qwen</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Brain -->
+                <div class="bg-white shadow-sm border border-gray-200 rounded-xl p-10 text-center fade-up delay-100 hover:shadow-md transition-shadow relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-[#00CA72]"></div>
+                    <div class="w-20 h-20 mx-auto bg-gray-50 rounded-2xl flex items-center justify-center text-4xl mb-8 border border-gray-200 shadow-inner group-hover:bg-[#00CA72]/10 transition-colors">🧠</div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900">The Brain</h3>
+                    <p class="text-gray-600 mb-8 leading-relaxed">The reasoning engine. It plans, decides, and understands context.</p>
+                    <div class="pt-6 border-t border-gray-100">
+                        <p class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">Powered by</p>
+                        <div class="flex flex-wrap justify-center gap-2">
+                            <span class="px-3 py-1 bg-gray-50 text-gray-600 rounded-md border border-gray-200 text-sm">Claude</span>
+                            <span class="px-3 py-1 bg-gray-50 text-gray-600 rounded-md border border-gray-200 text-sm">GPT-4o</span>
+                            <span class="px-3 py-1 bg-gray-50 text-gray-600 rounded-md border border-gray-200 text-sm">Gemini</span>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="text-center fade-up delay-200">
-                    <div class="w-24 h-24 mx-auto bg-gray-50 rounded-full flex items-center justify-center text-4xl mb-6 border border-gray-200 shadow-sm">🗂️</div>
-                    <h3 class="text-2xl font-bold mb-4 text-gray-900">Memory</h3>
-                    <p class="text-gray-600">Knows your context, your preferences, your history.</p>
+                <!-- Memory -->
+                <div class="bg-white shadow-sm border border-gray-200 rounded-xl p-10 text-center fade-up delay-200 hover:shadow-md transition-shadow relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-[#FB275D]"></div>
+                    <div class="w-20 h-20 mx-auto bg-gray-50 rounded-2xl flex items-center justify-center text-4xl mb-8 border border-gray-200 shadow-inner group-hover:bg-[#FB275D]/10 transition-colors">🗂️</div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900">The Memory</h3>
+                    <p class="text-gray-600 mb-8 leading-relaxed">Long-term context. It remembers your preferences, rules, and past conversations.</p>
+                    <div class="pt-6 border-t border-gray-100">
+                        <p class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">Stored in</p>
+                        <div class="flex flex-wrap justify-center gap-2">
+                            <span class="px-3 py-1 bg-gray-50 text-gray-600 rounded-md border border-gray-200 text-sm">Vector DBs</span>
+                            <span class="px-3 py-1 bg-gray-50 text-gray-600 rounded-md border border-gray-200 text-sm">Markdown Logs</span>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="text-center fade-up delay-300">
-                    <div class="w-24 h-24 mx-auto bg-gray-50 rounded-full flex items-center justify-center text-4xl mb-6 border border-gray-200 shadow-sm">🔧</div>
-                    <h3 class="text-2xl font-bold mb-4 text-gray-900">Tools</h3>
-                    <p class="text-gray-600 mb-4">Real access to your world.</p>
-                    <p class="text-sm text-gray-500">Calendar • Gmail • Slack • GitHub • Web</p>
+                <!-- Tools -->
+                <div class="bg-white shadow-sm border border-gray-200 rounded-xl p-10 text-center fade-up delay-300 hover:shadow-md transition-shadow relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-[#FFCC00]"></div>
+                    <div class="w-20 h-20 mx-auto bg-gray-50 rounded-2xl flex items-center justify-center text-4xl mb-8 border border-gray-200 shadow-inner group-hover:bg-[#FFCC00]/10 transition-colors">🔧</div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900">The Tools</h3>
+                    <p class="text-gray-600 mb-8 leading-relaxed">Real access to your world. It reads, writes, and executes on your behalf.</p>
+                    <div class="pt-6 border-t border-gray-100">
+                        <p class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">Connected to</p>
+                        <div class="flex flex-wrap justify-center gap-2">
+                            <span class="px-3 py-1 bg-gray-50 text-gray-600 rounded-md border border-gray-200 text-sm">Calendar</span>
+                            <span class="px-3 py-1 bg-gray-50 text-gray-600 rounded-md border border-gray-200 text-sm">Slack</span>
+                            <span class="px-3 py-1 bg-gray-50 text-gray-600 rounded-md border border-gray-200 text-sm">Gmail</span>
+                            <span class="px-3 py-1 bg-gray-50 text-gray-600 rounded-md border border-gray-200 text-sm">Web</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Connection Diagram beneath cards -->
+            <div class="mt-12 fade-up delay-400 flex justify-center">
+                <div class="bg-gray-50 border border-gray-200 rounded-full px-8 py-4 inline-flex items-center gap-6 shadow-sm">
+                    <span class="font-bold text-gray-900">OpenClaw</span>
+                    <span class="text-gray-400">ties these together</span>
+                    <svg class="w-6 h-6 text-[#00CA72]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                 </div>
             </div>
         </div>
