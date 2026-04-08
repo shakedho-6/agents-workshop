@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agents Workshop | monday.com PMM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0f;
+            color: #f0f0f0;
+            overflow-x: hidden;
+        }
+        
+        .fade-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+        .delay-400 { transition-delay: 400ms; }
+        .delay-500 { transition-delay: 500ms; }
+
+        /* WhatsApp Bubble Styles */
+        .chat-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .bubble {
+            max-width: 80%;
+            padding: 12px 16px;
+            border-radius: 12px;
+            margin-bottom: 16px;
+            font-size: 0.95rem;
+            line-height: 1.4;
+            position: relative;
+        }
+        .bubble-shaked {
+            background-color: #f0f0f0;
+            color: #111;
+            margin-left: auto;
+            border-bottom-right-radius: 4px;
+        }
+        .bubble-jazz {
+            background-color: #7c3aed;
+            color: white;
+            margin-right: auto;
+            border-bottom-left-radius: 4px;
+        }
+        .bubble-ray {
+            background-color: #00d4aa;
+            color: #111;
+            margin-right: auto;
+            border-bottom-left-radius: 4px;
+        }
+        .chat-name {
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+            opacity: 0.8;
+        }
+
+        .glass-card {
+            background: #13131f;
+            border: 1px solid #1e1e2e;
+            border-radius: 16px;
+        }
+
+        .accent-teal { color: #00d4aa; }
+        .accent-purple { color: #7c3aed; }
+        .bg-teal { background-color: #00d4aa; }
+        
+        section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 4rem 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. HERO -->
+    <section id="hero" class="relative">
+        <div class="max-w-4xl mx-auto w-full">
+            <h1 class="text-5xl font-bold mb-12 text-center fade-up">This already happened.</h1>
+            
+            <div class="chat-container mb-16">
+                <div class="bubble bubble-shaked fade-up delay-100">
+                    <div class="chat-name">Shaked 🙋</div>
+                    Jazz, give me a competitive intel brief on the AI-CRM space. Focus on who's winning and why.
+                </div>
+                <div class="bubble bubble-jazz fade-up delay-200">
+                    <div class="chat-name">Jazz 💫</div>
+                    On it. Analyzing Salesforce Einstein, HubSpot Breeze, monday CRM, and 4 others... give me 30 seconds.
+                </div>
+                <div class="bubble bubble-jazz fade-up delay-300">
+                    <div class="chat-name">Jazz 💫</div>
+                    Brief ready ⚡ — Salesforce leads on enterprise lock-in, HubSpot winning SMB with Breeze AI, monday CRM differentiating on no-code AI agents + flexibility. Trending keywords: 'AI sales agent', 'agentic CRM', 'autonomous pipeline'. monday's gap: not enough SEO coverage on 'agentic' positioning.
+                </div>
+                <div class="bubble bubble-ray fade-up delay-400">
+                    <div class="chat-name">Ray ⚡</div>
+                    Picked that up. Here's a game plan: target 'AI sales agent' and 'agentic CRM' with a dedicated LP. I'll draft the copy structure and suggest a Vercel deploy. Want me to build it?
+                </div>
+                <div class="bubble bubble-shaked fade-up delay-500">
+                    <div class="chat-name">Shaked 🙋</div>
+                    Yes. Do it.
+                </div>
+                <div class="bubble bubble-ray fade-up delay-[600ms]">
+                    <div class="chat-name">Ray ⚡</div>
+                    LP deployed → <a href="https://monday-ai-crm.vercel.app" class="underline">https://monday-ai-crm.vercel.app</a> 🚀
+                </div>
+            </div>
+
+            <div class="text-center fade-up delay-[700ms]">
+                <h2 class="text-3xl font-bold accent-teal mb-4">Two agents. One PMM. Zero manual research.</h2>
+                <p class="text-xl text-gray-400">This is what your day looks like when you have an agent team.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. THE AI WAVES -->
+    <section id="waves" class="bg-[#0f0f16]">
+        <div class="max-w-6xl mx-auto w-full">
+            <h2 class="text-4xl font-bold mb-16 text-center fade-up">How we got here.</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Wave 1 -->
+                <div class="glass-card p-8 fade-up delay-100">
+                    <div class="text-sm font-bold text-gray-500 mb-2">WAVE 1 (2022-2023)</div>
+                    <h3 class="text-2xl font-bold mb-6 text-white">Assistants</h3>
+                    <div class="flex space-x-4 mb-6 text-3xl">
+                        <span>🤖</span><span>🧠</span><span>✨</span>
+                    </div>
+                    <p class="text-gray-400">You ask. It answers. No memory, no action.</p>
+                </div>
+                
+                <!-- Wave 2 -->
+                <div class="glass-card p-8 fade-up delay-200">
+                    <div class="text-sm font-bold text-gray-500 mb-2">WAVE 2 (2023-2024)</div>
+                    <h3 class="text-2xl font-bold mb-6 text-white">Workflow Agents</h3>
+                    <div class="flex space-x-4 mb-6 text-3xl">
+                        <span>⚙️</span><span>🔌</span><span>⚡</span>
+                    </div>
+                    <p class="text-gray-400">Connected to tools. Still reactive.</p>
+                </div>
+                
+                <!-- Wave 3 -->
+                <div class="glass-card p-8 border border-[#00d4aa] relative overflow-hidden fade-up delay-300">
+                    <div class="absolute top-0 right-0 bg-[#00d4aa] text-black text-xs font-bold px-3 py-1 rounded-bl-lg">NOW</div>
+                    <div class="text-sm font-bold text-[#00d4aa] mb-2">WAVE 3 (2024-now)</div>
+                    <h3 class="text-2xl font-bold mb-6 text-white">Autonomous Agents</h3>
+                    <div class="flex items-center space-x-3 mb-6 text-xl font-bold">
+                        <span>🦞 OpenClaw</span>
+                        <span class="text-gray-600">|</span>
+                        <span class="accent-teal">NemoClaw</span>
+                    </div>
+                    <p class="text-gray-300">Initiates on its own. Closes the loop. Works while you sleep.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. HOW AN AGENT WORKS -->
+    <section id="how-it-works">
+        <div class="max-w-6xl mx-auto w-full">
+            <h2 class="text-4xl font-bold mb-16 text-center fade-up">Brain. Memory. Tools.</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="text-center fade-up delay-100">
+                    <div class="w-24 h-24 mx-auto bg-[#13131f] rounded-full flex items-center justify-center text-4xl mb-6 border border-[#1e1e2e]">🧠</div>
+                    <h3 class="text-2xl font-bold mb-4">Brain</h3>
+                    <p class="text-gray-400 mb-4">An LLM at its core.</p>
+                    <p class="text-sm text-gray-500">Claude • GPT-4 • Gemini • Qwen</p>
+                </div>
+                
+                <div class="text-center fade-up delay-200">
+                    <div class="w-24 h-24 mx-auto bg-[#13131f] rounded-full flex items-center justify-center text-4xl mb-6 border border-[#1e1e2e]">🗂️</div>
+                    <h3 class="text-2xl font-bold mb-4">Memory</h3>
+                    <p class="text-gray-400">Knows your context, your preferences, your history.</p>
+                </div>
+                
+                <div class="text-center fade-up delay-300">
+                    <div class="w-24 h-24 mx-auto bg-[#13131f] rounded-full flex items-center justify-center text-4xl mb-6 border border-[#1e1e2e]">🔧</div>
+                    <h3 class="text-2xl font-bold mb-4">Tools</h3>
+                    <p class="text-gray-400 mb-4">Real access to your world.</p>
+                    <p class="text-sm text-gray-500">Calendar • Gmail • Slack • GitHub • Web</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. INFRASTRUCTURE -->
+    <section id="infrastructure" class="bg-[#0f0f16]">
+        <div class="max-w-5xl mx-auto w-full text-center">
+            <h2 class="text-4xl font-bold mb-16 fade-up">What runs it.</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                <div class="glass-card p-10 fade-up delay-100">
+                    <h3 class="text-3xl font-bold mb-4">🦞 OpenClaw</h3>
+                    <p class="text-gray-400 text-lg">Open source agent runtime. The engine behind autonomous agents. Self-hostable.</p>
+                </div>
+                
+                <div class="glass-card p-10 fade-up delay-200">
+                    <h3 class="text-3xl font-bold mb-4 accent-teal">NemoClaw</h3>
+                    <p class="text-gray-400 text-lg">NVIDIA's enterprise fork. Secured compute. What Globster.ai runs on.</p>
+                </div>
+            </div>
+
+            <div class="fade-up delay-300 p-8 glass-card inline-block mx-auto">
+                <div class="flex items-center justify-center space-x-6 text-xl font-semibold">
+                    <span class="px-4 py-2 bg-gray-800 rounded">LLM</span>
+                    <span class="text-gray-500">→</span>
+                    <span class="px-4 py-2 bg-[#00d4aa] text-black rounded">OpenClaw</span>
+                    <span class="text-gray-500">→</span>
+                    <div class="flex space-x-3 text-2xl">
+                        <span>💬</span>
+                        <span>📅</span>
+                        <span>📧</span>
+                        <span>💻</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. PMM USE CASES -->
+    <section id="use-cases">
+        <div class="max-w-6xl mx-auto w-full">
+            <h2 class="text-4xl font-bold mb-16 text-center fade-up">What this means for you.</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="glass-card p-8 border-l-4 border-l-[#00d4aa] fade-up delay-100">
+                    <h3 class="text-2xl font-bold mb-4">Research & Intel</h3>
+                    <p class="text-gray-400 text-lg">Monitor competitors daily. Morning briefing in your WhatsApp.</p>
+                </div>
+                
+                <div class="glass-card p-8 border-l-4 border-l-[#7c3aed] fade-up delay-200">
+                    <h3 class="text-2xl font-bold mb-4">Content & Copy</h3>
+                    <p class="text-gray-400 text-lg">Brief an agent with your positioning docs. Get drafts back.</p>
+                </div>
+                
+                <div class="glass-card p-8 border-l-4 border-l-[#f0f0f0] fade-up delay-300">
+                    <h3 class="text-2xl font-bold mb-4">Launch Ops</h3>
+                    <p class="text-gray-400 text-lg">Track open launch tasks. Auto-summarize Gong calls.</p>
+                </div>
+                
+                <div class="glass-card p-8 border-l-4 border-l-[#4ade80] fade-up delay-400">
+                    <h3 class="text-2xl font-bold mb-4">Personal Ops</h3>
+                    <p class="text-gray-400 text-lg">Manage calendar from WhatsApp. Draft emails in your voice.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. CTA -->
+    <section id="cta" class="bg-[#050508] text-center">
+        <div class="max-w-4xl mx-auto w-full">
+            <h2 class="text-6xl font-bold mb-6 fade-up">Build one this week.</h2>
+            <p class="text-2xl text-gray-400 mb-16 fade-up delay-100">Even if it's small. Even if it's dumb.<br>The learning only happens when you run it.</p>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center gap-6 mb-16 fade-up delay-200">
+                <a href="https://globster.ai" target="_blank" class="glass-card px-8 py-6 hover:bg-[#1e1e2e] transition text-left w-full md:w-auto cursor-pointer border-[#00d4aa]">
+                    <div class="text-xl font-bold mb-2 accent-teal">globster.ai</div>
+                    <div class="text-gray-400">Deploy your agent in 2 minutes</div>
+                </a>
+                
+                <a href="https://ocana.ai" target="_blank" class="glass-card px-8 py-6 hover:bg-[#1e1e2e] transition text-left w-full md:w-auto cursor-pointer">
+                    <div class="text-xl font-bold mb-2 text-white">ocana.ai</div>
+                    <div class="text-gray-400">Managed agent platform</div>
+                </a>
+            </div>
+
+            <a href="https://app.getguru.com/card/iArMrX4T/How-to-Create-an-Agent-in-Ocana" target="_blank" class="inline-block text-[#00d4aa] underline text-lg mb-16 fade-up delay-300">
+                📖 Step-by-step Ocana Setup Guide (Guru)
+            </a>
+
+            <div class="mt-8 fade-up delay-400">
+                <a href="https://globster.ai" target="_blank" class="bg-[#00d4aa] text-black font-bold py-4 px-10 rounded-full text-xl hover:bg-[#00b38f] transition shadow-[0_0_20px_rgba(0,212,170,0.4)]">
+                    Start at globster.ai
+                </a>
+            </div>
+
+            <div class="mt-24 text-gray-600 text-sm font-semibold fade-up delay-500">
+                monday Agent Labs | PMM Team | 2026
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.2
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-up').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
